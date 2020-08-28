@@ -26,6 +26,8 @@ function escolherElementoAleatorio(array) {
 
 // fim das funções fornecidas na questão
 
+//variaveis necessarias
+let sorteio = null, contador = 0;
 let quadrado = document.querySelector(".quadrado");
 const botao1 = document.querySelector(".button1");
 const botao2 = document.querySelector(".button2");
@@ -69,6 +71,7 @@ botao1.addEventListener("click", () => {
     }else{
         alert("Não foi dessa vez!");
     }
+    venceu(contador);
     sorteioCor();
 })
 
@@ -79,6 +82,7 @@ botao2.addEventListener("click", () => {
     }else{
         alert("Não foi dessa vez!");
     }
+    venceu(contador);
     sorteioCor();
 })
 
@@ -89,17 +93,23 @@ botao3.addEventListener("click", () => {
     }else{
         alert("Não foi dessa vez!");
     }
+    venceu(contador);
     sorteioCor();
 })
 
 //verificando a quantidade de acertos
-if(contador===10){
-    alert("Parabéns! Você venceu!");
-}else{
-    alert(`Tamo quase lá, você acertou ${contador} vezes!`)
+
+const venceu = (contador) => {
+    if(contador===10){
+        alert("Parabéns! Você venceu!");
+    }else if (contador>5 && contador<10){
+        alert(`Tamo quase lá, você acertou ${contador} vezes!`);
+    }else{
+        alert(`Vamo que dá, você acertou ${contador} vez(es)!`)
+    }
 }
 
-let sorteio = null, contador = 0;
+
 sorteioCor();
 
 

@@ -24,7 +24,7 @@ h2{
 .quadrado{
     width: 400px;
     height: 400px;
-    background-color: blue;
+    background-color: none;
 }
 
 button{
