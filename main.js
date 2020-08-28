@@ -64,32 +64,42 @@ const sorteioBotoes = (cor) => {
 //verificando o click
 botao1.addEventListener("click", () => {
     if(sorteio==="botao1"){
-        alert("Parabéns, acertou!")
+        alert("Parabéns, acertou!");
+        contador++;
     }else{
-        alert("Não foi dessa vez!")
+        alert("Não foi dessa vez!");
     }
     sorteioCor();
 })
 
 botao2.addEventListener("click", () => {
     if(sorteio==="botao2"){
-        alert("Parabéns, acertou!")
+        alert("Parabéns, acertou!");
+        contador++;
     }else{
-        alert("Não foi dessa vez!")
+        alert("Não foi dessa vez!");
     }
     sorteioCor();
 })
 
 botao3.addEventListener("click", () => {
     if(sorteio==="botao3"){
-        alert("Parabéns, acertou!")
+        alert("Parabéns, acertou!");
+        contador++;
     }else{
-        alert("Não foi dessa vez!")
+        alert("Não foi dessa vez!");
     }
     sorteioCor();
 })
 
-let sorteio = null;
+//verificando a quantidade de acertos
+if(contador===10){
+    alert("Parabéns! Você venceu!");
+}else{
+    alert(`Tamo quase lá, você acertou ${contador} vezes!`)
+}
+
+let sorteio = null, contador = 0;
 sorteioCor();
 
 
